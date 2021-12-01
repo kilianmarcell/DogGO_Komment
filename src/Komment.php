@@ -1,10 +1,10 @@
 <?php
 
-namespace Petrik\Rajzfilmek;
+namespace Doggo\Komment;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Rajzfilm extends Model {
+class Komment extends Model {
     protected $table = 'komment';
     public $timestamps = false;
     
