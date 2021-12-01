@@ -1,0 +1,14 @@
+{
+    "name": "doggo/komment",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Doggo\\Komment\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/database": "^7.30",
+        "slim/slim": "^4.8",
+        "slim/psr7": "^1.4"
+    }
+}
