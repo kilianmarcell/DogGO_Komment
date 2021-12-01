@@ -82,12 +82,13 @@ return function(Slim\App $app) {
             }
             $komment = Komment::find($args['id']);
             if ($komment === null) {
-                $ki = json_encode(['error' => 'Nincs ilyen ID-jű Komment']);
+                $ki = json_encode(['error' => 'Nincs ilyen ID-jű rajzfilm']);
                 $response->getBody()->write($ki);
                 return $response
                     ->withHeader('Content-Type', 'application/json')
                     ->withStatus(404);
             }
+            $response->getBody()->write($komment->toJson());
             return $response
                 ->withHeader('Content-Type', 'application/json')
                 ->withStatus(200);
